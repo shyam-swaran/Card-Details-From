@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="whole">
+    <div class="card">
+      <div class="card-front">
+        <div class="card-front-details">
+          <img class="card-logo" src="images/card-logo.svg" alt="">
+          <p id="card-number" >0000 0000 0000 0000</p>
+          <p id="card-name">Jane Appleseed</p>
+          <p id="card-exp"><span id="MM">00</span>/<span id="YY">00</span></p>
+        </div>
+        <img class="card-img" src="images/bg-card-front.png" alt="">
+      </div>
+      <div class="card-back">
+        <div class="card-back-details">
+          <p id="card-cvv">000</p>
+        </div>
+        <img class="card-img" src="images/bg-card-back.png" alt="">
+      </div>
+    </div>
+
+    <div id="form">
+      <div class="form-before">
+        <p class="header">CARDHOLDER NAME</p>
+        <input id="form-card-name" class="full-input" type="text" placeholder="e.g. Jane Appleseed">
+        <p class="header">CARD NUMBER</p>
+        <div class="input-All">
+          <p id="card-number-warning" class="warnings"></p>
+          <input id="form-card-number" class="full-input" type="text" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
+        <p class="exp-header">EXP. DATE(MM/YY)</p>
+        <p class="cvc-header">CVC</p>
+        <div class="input-All">
+          <p id="date-warnings" class="warnings"></p>
+          <input id="exp-month" class="exp-date" type="number" placeholder="MM">
+          <input id="exp-year" class="exp-date" type="number" placeholder="YY">
+        </div>
+        <div class="input-All">
+          <p id="cvv-warnings" class="warnings"></p>
+          <input id="cvc" type="number" placeholder="e.g. 123">
+        </div>
+        <button onclick="submit()" class="custom">Confirm</button>
+      </div>
+      <div class="form-after">
+        <img src="images/icon-complete.svg" alt="">
+        <h1 class="tq">THANK YOU!</h1>
+        <P class="end-para">We've added your card details</P>
+        <button class="custom">Confirm</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
